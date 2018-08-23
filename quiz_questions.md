@@ -111,15 +111,26 @@ a = 1.3
 - (vii) Flexibility and efficiency of use. Experienced users should be able to accelerate their experience, using keyboard shortcuts etc. The interface should cater to all levels of experience with the software.
 - (viii) Aesthetic and minimalist design. Don't present information that is not relevant. It reduces visibility of information that is.
 - (ix) Help users diagnose and recover from errors. Error messages should be clearly worded, identify the problem and suggest a solution.
-- (x) Help and documentation. Should be easy to search, not too long, and focus on the user's task. 
+- (x) Help and documentation. Should be easy to search, not too long, and focus on the user's task.
 
+##### What is MVC and why would we use it?
+- MVC stands for Model Views Controller. It's an architectural pattern for building web apps.
+- Model, Views and Controller are the three components of the app.
+- The views are what the user sees: rendered html pages that may or may not have forms, or some other method for getting user input, on them.
+- The controller accepts inputs from the views and turns them into commands that manipulate the model. For example, a user might submit a sign-up form: the controller would update the model with the new data then probably render a new view.
+- The model contains the data for the app. It specifies the properties of items in the database and which items are present in it.
+- Separating the app's components enables developers to work on different parts of the app simultaneously.
+- It also means that components, being independent of each other, are more likely to be able to be reused in other apps.
+
+
+How would you build an API? What language would you use?
+What is an 'n plus 1' problem?
 What is the difference between a linked list and an array list?
 Name a design pattern; how would you use it?
 What does the Single Responsibility Principle mean?
 What is encapsulation?
 Why would you program using TDD? What are the drawbacks?
 What do we mean by DRY?
-What is MVC and why would we use it?
 Describe classical vs. prototypical inheritance
 What's the advantage of a no-sql database?
 How would you deploy code to production?
@@ -127,7 +138,6 @@ What is a recent technical challenge you experienced and how did you solve it?
 How do you debug?
 What’s your process for using/learning about gems?
 How would you go about getting up to speed at our company?
-How would you build an API? What language would you use?
 Why do companies increasingly move towards using micro services?
 Have you ever used a grid system, and if so, what do you prefer?
 What is CRUD?
