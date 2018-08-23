@@ -82,7 +82,7 @@ class PersonalDresser() {
 - Low-level languages like C are like this. You have to free up memory yourself with commands like `free()`.
 - In high-level languages like JavaScript the process is automatic.
 - Assigning variables writes objects into memory. Objects are deleted by the garbage collector when not they're not referenced.  
-- When the variable `a` is reassigned in the Paella example below, the object that used to be assigned to it is collected.
+- When the variable `a` is reassigned in the Paella example below, the object that used to be assigned to it, `{ 'noise': 'baa' }`, is collected.
 ```
 var a = { 'noise': 'baa' }
 a = 1.3
@@ -92,14 +92,27 @@ a = 1.3
 - A hashmap allocates an index to a key in a hash using a hash function.
 - That sounds nuts. It makes more sense with an example:
 - Say I have a key-value pair like `{ 'vodka': '45%' }` and I want to know its position in a hash that stores the percentage proof values for loads of alcoholic drinks.
-- The hashmap can tell me where in the hash `{ 'vodka': '45%' }` is (if it's already in the hash), or where it should be inserted (if it's not). Index no. 25, for example.
+- The hashmap can tell me where in the hash `{ 'vodka': '45%' }` is (if it's already in the hash) – useful when the hash is super-long – or where it should be inserted (if it's not). Index no. 25, for example.
 - The hashmap does this with a 'hash function', a function that takes the key, (`'vodka'`), as an argument and returns an index.
 - An issue with hash functions is that if they're not implemented well they can return the same index for different keys.
 - Hash functions work out what the index of the key is based on rules. If the rules are faulty the function may return the same index for `'vodka'` as for `'gin'`. This is known as a 'hash collision'.
-- A perfect hash function produces a 'uniform distrubution' of hash values, which is to say no collisions.
-- Cryptographic functions are a good way of ensuring there are no collisions. Each key generates a unique index using encryption algorithms.   
+- A perfect hash function produces a 'uniform distribution' of hash values, which is to say no collisions.
+- Cryptographic functions are a good way of ensuring there are no collisions, as each key generates a unique index using encryption algorithms.   
 
 ##### What do you understand about usability principles? (for front end jobs)
+- Usability principles are design principles aimed at making user experience of software smoother.
+- There's a wellknown set of 10 principles set out by Jakob Nielson and Rolf Molich in the 1990s. They are good principles:
+- (i) Visibility of system status. Keep the user up to date with what is going on with the system. Is something 'loading...'? Is their 'payment being processed...'?
+- (ii) Match between system and real world. Don't use technical jargon; use words correctly; information should appear in an order that makes sense.
+- (iii) User control and freedom. Users will make mistakes. Give them a clear escape route, well sign-posted, if they go down the wrong path.
+- (iv) Consistency and standards. The use of vocabulary should be consistent across the interface. Users shouldn't have to worry that a word might mean something else.
+- (v) Error prevention. Good error messages are important but even better is to make it impossible for users to trigger errors. Test all unhappy paths.
+- (vi) Recognition rather than recall. Don't make the user have to use their memory. They shouldn't have to remember information from earlier in their experience. Instructions for how to operate the system should be always available.
+- (vii) Flexibility and efficiency of use. Experienced users should be able to accelerate their experience, using keyboard shortcuts etc. The interface should cater to all levels of experience with the software.
+- (viii) Aesthetic and minimalist design. Don't present information that is not relevant. It reduces visibility of information that is.
+- (ix) Help users diagnose and recover from errors. Error messages should be clearly worded, identify the problem and suggest a solution.
+- (x) Help and documentation. Should be easy to search, not too long, and focus on the user's task. 
+
 What is the difference between a linked list and an array list?
 Name a design pattern; how would you use it?
 What does the Single Responsibility Principle mean?
