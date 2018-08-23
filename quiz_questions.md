@@ -1,5 +1,5 @@
 # Quiz Questions
-##### What do you understand by estimation? (e.g. planning poker, T-shirt sizing) How would you work out how long something would take?
+
 ##### Why are cache invalidation and naming things considered the hardest things in programming?
 - I'm going to treat this as two questions: why is cache invalidation hard? and why is naming things hard?
 - I don't know enough to know if these are really the hardest things in programming. I suspect not, but anyway...
@@ -81,13 +81,25 @@ class PersonalDresser() {
 - i.e. You would have to remember where unused things were stored and delete them whenever there was a memory shortage.
 - Low-level languages like C are like this. You have to free up memory yourself with commands like `free()`.
 - In high-level languages like JavaScript the process is automatic.
-- Objects that aren't referenced are deleted:
+- Assigning variables writes objects into memory. Objects are deleted by the garbage collector when not they're not referenced.  
+- When the variable `a` is reassigned in the Paella example below, the object that used to be assigned to it is collected.
 ```
 var a = { 'noise': 'baa' }
+a = 1.3
 ```
 
-How is a hash map implemented?
-What do you understand about usability principles? (for front end jobs)
+##### How is a hash map implemented?
+- A hashmap allocates an index to a key in a hash using a hash function.
+- That sounds nuts. It makes more sense with an example:
+- Say I have a key-value pair like `{ 'vodka': '45%' }` and I want to know its position in a hash that stores the percentage proof values for loads of alcoholic drinks.
+- The hashmap can tell me where in the hash `{ 'vodka': '45%' }` is (if it's already in the hash), or where it should be inserted (if it's not). Index no. 25, for example.
+- The hashmap does this with a 'hash function', a function that takes the key, (`'vodka'`), as an argument and returns an index.
+- An issue with hash functions is that if they're not implemented well they can return the same index for different keys.
+- Hash functions work out what the index of the key is based on rules. If the rules are faulty the function may return the same index for `'vodka'` as for `'gin'`. This is known as a 'hash collision'.
+- A perfect hash function produces a 'uniform distrubution' of hash values, which is to say no collisions.
+- Cryptographic functions are a good way of ensuring there are no collisions. Each key generates a unique index using encryption algorithms.   
+
+##### What do you understand about usability principles? (for front end jobs)
 What is the difference between a linked list and an array list?
 Name a design pattern; how would you use it?
 What does the Single Responsibility Principle mean?
@@ -121,3 +133,4 @@ How would you optimise a system that is running slow?
 How would you identify bottlenecks in your system?
 What is an 'n plus 1' problem?
 How does the internet work?
+What do you understand by estimation? (e.g. planning poker, T-shirt sizing) How would you work out how long something would take?
