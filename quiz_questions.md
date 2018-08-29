@@ -122,8 +122,10 @@ a = 1.3
 - Separating the app's components enables developers to work on different parts of the app simultaneously.
 - It also means that components, being independent of each other, are more likely to be able to be reused in other apps.
 
+##### What's the advantage of a no-sql database? What are the benefits of a SQL database over other types of data-stores?
 
 How would you build an API? What language would you use?
+What is the DOM?
 What is an 'n plus 1' problem?
 What is the difference between a linked list and an array list?
 Name a design pattern; how would you use it?
@@ -132,7 +134,6 @@ What is encapsulation?
 Why would you program using TDD? What are the drawbacks?
 What do we mean by DRY?
 Describe classical vs. prototypical inheritance
-What's the advantage of a no-sql database?
 How would you deploy code to production?
 What is a recent technical challenge you experienced and how did you solve it?
 How do you debug?
@@ -154,6 +155,5 @@ When should you raise exceptions?
 What do we mean by prototypical inheritance?
 How would you optimise a system that is running slow?
 How would you identify bottlenecks in your system?
-What is an 'n plus 1' problem?
 How does the internet work?
 What do you understand by estimation? (e.g. planning poker, T-shirt sizing) How would you work out how long something would take?
